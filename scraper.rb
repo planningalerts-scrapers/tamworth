@@ -9,7 +9,7 @@ def scrape_page(page, info_url_base, comment_url)
       "council_reference" => tds[0].inner_text,
       "date_received" => Date.new(year, month, day).to_s,
       "address" => tds[3].inner_text,
-      "description" => tds[4].inner_text,
+      "description" => tds[6].inner_text,
       "date_scraped" => Date.today.to_s
     }
     record["info_url"] = info_url_base + CGI.escape(record["council_reference"])
