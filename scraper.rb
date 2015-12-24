@@ -12,6 +12,13 @@ def scrape_page(page, info_url_base, comment_url)
       "description" => tds[6].inner_text,
       "date_scraped" => Date.today.to_s
     }
+
+    # The description of community facilities development can be unhelpful,
+    # like just "other", so provide a little helpful context.
+    if tds[5].text == "Community Facilities Development"
+      record["description"].prepend("Community Facilities Development: ")
+    end
+
     record["info_url"] = info_url_base + CGI.escape(record["council_reference"])
     record["comment_url"] = comment_url
     p record
