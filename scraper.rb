@@ -8,7 +8,7 @@ def scrape_page(page, info_url_base, comment_url)
     record = {
       "council_reference" => tds[0].inner_text,
       "date_received" => Date.new(year, month, day).to_s,
-      "address" => tds[2].inner_text,
+      "address" => tds[3].inner_text,
       "description" => tds[4].inner_text,
       "date_scraped" => Date.today.to_s
     }
