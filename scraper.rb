@@ -4,11 +4,12 @@ require 'mechanize'
 def scrape_page(page, info_url_base, comment_url)
   page.at("table.grid").search("tr.normalRow, tr.alternateRow").each do |tr|
     tds = tr.search("td")
-    day, month, year = tds[1].inner_text.split("/").map{|s| s.to_i}
+    day, month, year = tds[3].inner_text.split("/").map{|s| s.to_i}
+
     record = {
       "council_reference" => tds[0].inner_text,
       "date_received" => Date.new(year, month, day).to_s,
-      "address" => tds[3].inner_text,
+      "address" => tds[1].inner_text,
       "description" => tds[6].inner_text,
       "date_scraped" => Date.today.to_s
     }
