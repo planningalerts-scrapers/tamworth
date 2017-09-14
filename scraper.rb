@@ -1,6 +1,16 @@
 require 'scraperwiki'
 require 'mechanize'
 
+case ENV['MORPH_PERIOD']
+when 'thismonth'
+  period = 'TM'
+when 'lastmonth'
+  period = 'LM'
+else
+  period = 'TW'
+end
+puts "Getting '" + period + "' data, changable via MORPH_PERIOD environment"
+
 def scrape_page(page, info_url_base, comment_url)
   page.at("table.grid").search("tr.normalRow, tr.alternateRow").each do |tr|
     tds = tr.search("td")
@@ -51,7 +61,7 @@ end
 
 comment_url = "mailto:trc@tamworth.nsw.gov.au"
 base_url = "https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack"
-url = "#{base_url}/eTrackApplicationSearchResults.aspx?Field=S&Period=L14&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL14"
+url = "#{base_url}/eTrackApplicationSearchResults.aspx?Field=S&Period=" + period + "&r=P1.WEBGUEST&f=%24P1.ETR.SEARCH.SL14"
 info_url_base = "#{base_url}/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId="
 
 agent = Mechanize.new
