@@ -74,10 +74,14 @@ next_page_link = true
 while next_page_link
   scrape_page(page, info_url_base, comment_url)
   paging = page.at("table.grid tr.pagerRow")
-  next_page_link = paging.search("td a").find{|td| td.inner_text == (current_page_no + 1).to_s}
-  if next_page_link
-    current_page_no += 1
-    puts "Getting page #{current_page_no}..."
-    page = click(page, next_page_link)
+  if paging.nil?
+   next_page_link = false
+  else
+    next_page_link = paging.search("td a").find{|td| td.inner_text == (current_page_no + 1).to_s}
+    if next_page_link
+      current_page_no += 1
+      puts "Getting page #{current_page_no}..."
+      page = click(page, next_page_link)
+    end
   end
 end
