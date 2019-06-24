@@ -1,0 +1,36 @@
+---
+- council_reference: CC2019-0082.02
+  date_received: '2019-06-24'
+  address: 8 Glenmore Drive MOORE CREEK NSW 2340
+  description: New Single Storey Dwelling & Secondary Dwelling
+  date_scraped: '2019-05-15'
+  info_url: https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId=CC2019-0082.02
+  comment_url: mailto:trc@tamworth.nsw.gov.au
+- council_reference: LG2019-0908
+  date_received: '2019-06-24'
+  address: Oakenville Creek Road NUNDLE NSW 2340
+  description: Single Storey Dwelling
+  date_scraped: '2019-05-15'
+  info_url: https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId=LG2019-0908
+  comment_url: mailto:trc@tamworth.nsw.gov.au
+- council_reference: PrivCD2019-0292
+  date_received: '2019-06-24'
+  address: 9 Hyson Street KOOTINGAL NSW 2352
+  description: Attached awning to rear of Dwelling
+  date_scraped: '2019-05-15'
+  info_url: https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId=PrivCD2019-0292
+  comment_url: mailto:trc@tamworth.nsw.gov.au
+- council_reference: PrivCD2019-0293
+  date_received: '2019-06-24'
+  address: 6 Thornbill Road MOORE CREEK NSW 2340
+  description: New Dwelling & attached Double Garage
+  date_scraped: '2019-05-15'
+  info_url: https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId=PrivCD2019-0293
+  comment_url: mailto:trc@tamworth.nsw.gov.au
+- council_reference: PrivCD2019-0294
+  date_received: '2019-06-24'
+  address: 202 Tullamore Road LOOMBERAH NSW 2340
+  description: Shed
+  date_scraped: '2019-05-15'
+  info_url: https://eproperty.tamworth.nsw.gov.au/ePropertyProd/P1/eTrack/eTrackApplicationDetails.aspx?r=P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId=PrivCD2019-0294
+  comment_url: mailto:trc@tamworth.nsw.gov.au
