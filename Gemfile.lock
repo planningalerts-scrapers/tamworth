@@ -7,6 +7,14 @@ GIT
       httpclient
       sqlite_magic
 
+GIT
+  remote: https://github.com/planningalerts-scrapers/technology_one_scraper.git
+  revision: 9dce7cfcc37f0e92af8c243a9aa2b4cca7e973df
+  specs:
+    technology_one_scraper (0.1.0)
+      mechanize
+      scraperwiki
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,27 +22,29 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    domain_name (0.5.25)
+    domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     hashdiff (0.4.0)
-    http-cookie (1.0.2)
+    http-cookie (1.0.3)
       domain_name (~> 0.5)
     httpclient (2.7.0.1)
-    mechanize (2.7.3)
+    mechanize (2.7.6)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
-      mime-types (~> 2.0)
+      mime-types (>= 1.17.2)
       net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.4)
+      net-http-persistent (>= 2.5.2)
+      nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    mime-types (2.99)
-    mini_portile2 (2.0.0)
-    net-http-digest_auth (1.4)
+    mime-types (3.2.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2019.0331)
+    mini_portile2 (2.1.0)
+    net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
-    nokogiri (1.6.7.1)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
     ntlm-http (0.1.1)
     public_suffix (2.0.5)
     safe_yaml (1.0.5)
@@ -44,20 +54,20 @@ GEM
     timecop (0.9.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.1)
+    unf_ext (0.0.7.6)
     vcr (5.0.0)
     webmock (3.6.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrobots (0.1.1)
+    webrobots (0.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  mechanize
   scraperwiki!
+  technology_one_scraper!
   timecop
   vcr
   webmock
