@@ -9,17 +9,25 @@ GIT
 
 GIT
   remote: https://github.com/planningalerts-scrapers/technology_one_scraper.git
-  revision: 9dce7cfcc37f0e92af8c243a9aa2b4cca7e973df
+  revision: 52dab4cb8c04bc3c247e1b1616056cba8200ca36
   specs:
     technology_one_scraper (0.1.0)
+      activesupport
       mechanize
       scraperwiki
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    concurrent-ruby (1.1.5)
+    connection_pool (2.2.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     domain_name (0.5.20180417)
@@ -27,7 +35,9 @@ GEM
     hashdiff (0.4.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    httpclient (2.7.0.1)
+    httpclient (2.8.3)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
     mechanize (2.7.6)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -40,18 +50,23 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.4.0)
+    minitest (5.11.3)
     net-http-digest_auth (1.4.1)
-    net-http-persistent (2.9.4)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    net-http-persistent (3.0.1)
+      connection_pool (~> 2.2)
+    nokogiri (1.10.3)
+      mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
-    public_suffix (2.0.5)
+    public_suffix (3.1.1)
     safe_yaml (1.0.5)
-    sqlite3 (1.3.11)
+    sqlite3 (1.4.1)
     sqlite_magic (0.0.6)
       sqlite3
+    thread_safe (0.3.6)
     timecop (0.9.1)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
@@ -73,7 +88,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.0.0p648
+   ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
